@@ -1,4 +1,4 @@
-$primary-color: #381696;
+$primary-color: #cf1717;
 $primary-text-color: #fff;
 
 html,
@@ -14,7 +14,6 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   background-color: #fff;
   //background-color: #fff;
-  border-top: 10px solid $primary-color;
 }
 a {
   color: $primary-color;
@@ -89,14 +88,14 @@ a {
     border-color: $primary-color;
     color: $primary-text-color;
     &:hover {
-      background-color: #10072b;
+      background-color: #a80f0f;
       color: #fff;
       text-decoration: none;
     }
   }
   &:hover {
     background-color: #d3d6e7;
-    color: #00062b;
+    color: #a80f0f;
   }
 }
 .primary-content {
@@ -127,7 +126,7 @@ a {
     margin-bottom: 32px;
     text-align: center;
   }
-  
+
 }
 .post-thumbnail {
   text-align: center;
@@ -250,13 +249,13 @@ a {
   }
 }
 /* Portrait and Landscape */
-@media only screen 
+@media only screen
 and (min-width: 768px) {
 .grids {
   grid-template-columns: 1fr 1fr;
 }
 }
-@media only screen 
+@media only screen
   and (min-width: 1024px) {
   .grids {
     grid-template-columns: 1fr 1fr 1fr;

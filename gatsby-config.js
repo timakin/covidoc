@@ -7,15 +7,13 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Delog`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://delog-w3layouts.netlify.com/`,
+    title: `Covidoc`,
+    description: `A website to catch up upstream and reliable sources about COVID-19.`,
+    // siteUrl: ``,
     home: {
-      title: `Hi! I'm Delog`,
-      description: `I have been specifically designed to become a digital home for designers and developers, help them build amazing professional looking websites with ease. You don't have to worry about nitty gritty of web hosting services to run a blog and yet take full advantage of CMS to manage content :)`,
+      title: `Covidoc`,
+      description: `A website to catch up upstream and reliable sources about COVID-19.`,
     },
-    /* W3Layouts domain verification key for contact forms https://my.w3layouts.com/Forms/ */
-    w3l_dom_key: `5e609f7a2d23fCF_Domain_verify` 
   },
   plugins: [
     {
@@ -43,15 +41,15 @@ module.exports = {
         }],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-30027142-1",
-        head: true,
-      }
-    },
-    `gatsby-plugin-sass`, 
+    // {
+    //   resolve: "gatsby-source-google-sheets",
+    //   options: {
+    //     spreadsheetId: "1Ca54x1WzuLqq96VxJ23vdQkHiFty-AE4puu00JZhKto",
+    //     worksheetTitle: "links",
+    //     credentials: require("./credentials/client_secret.json")
+    //   }
+    // },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
   ],
