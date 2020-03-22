@@ -20,7 +20,7 @@ export default () => (
         <div className="primary-content">
           <p>{data.site.siteMetadata.home.description}</p>
         </div>
-        <a href={"https://docs.google.com/spreadsheets/d/1Ca54x1WzuLqq96VxJ23vdQkHiFty-AE4puu00JZhKto/edit#gid=0"} target={"_blank"} className="button -primary">Add resource &rarr;</a>
+        <a href={"https://docs.google.com/spreadsheets/d/1Ca54x1WzuLqq96VxJ23vdQkHiFty-AE4puu00JZhKto/edit#gid=0"} target={"_blank"} rel="noopener noreferrer" className="button -primary">Add resource &rarr;</a>
       </div>
     )}
   />

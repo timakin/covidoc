@@ -7,16 +7,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allGoogleSpreadsheetLinks(sort: { fields: [date], order: DESC }) {
         edges {
           node {
             id
-            frontmatter {
-              path
-            }
+            title
+            url
+            thumbnail_url
+            date
           }
         }
       }
@@ -29,9 +27,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allGoogleSpreadsheetLinks.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.path,
+      path: node.url,
       component: blogPostTemplate,
       context: {}, // additional data can be passed via context
     })

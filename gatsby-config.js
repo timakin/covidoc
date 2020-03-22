@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+console.log(process.env)
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -44,14 +46,15 @@ I am publishing this site with the hope that we can make a calm and quick effort
         }],
       },
     },
-    // {
-    //   resolve: "gatsby-source-google-sheets",
-    //   options: {
-    //     spreadsheetId: "1Ca54x1WzuLqq96VxJ23vdQkHiFty-AE4puu00JZhKto",
-    //     worksheetTitle: "links",
-    //     credentials: require("./credentials/client_secret.json")
-    //   }
-    // },
+    {
+      resolve: "gatsby-source-google-spreadsheet",
+      options: {
+        spreadsheetId: "1Ca54x1WzuLqq96VxJ23vdQkHiFty-AE4puu00JZhKto",
+        worksheetTitle: "links",
+        typePrefix: "GoogleSpreadsheet",
+        credentials: JSON.parse(`${process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS}`),
+      }
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
