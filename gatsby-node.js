@@ -13,7 +13,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             id
             title
             url
-            thumbnail_url
             date
           }
         }

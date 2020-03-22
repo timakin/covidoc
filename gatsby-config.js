@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-console.log(process.env)
-
 module.exports = {
   /* Your site config here */
   siteMetadata: {
